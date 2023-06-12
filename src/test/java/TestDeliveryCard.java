@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class TestDeliveryCard {
     @Test
     void shouldRegisterByAccountNumber() {
-        Configuration.holdBrowserOpen = true;
+        Configuration.headless = true;
         open("http://localhost:9999");
         $(By.cssSelector("[data-test-id='city'] input")).setValue("Саратов");
         $(By.cssSelector("[data-test-id='date'] input")).setValue("14.06.2023");
